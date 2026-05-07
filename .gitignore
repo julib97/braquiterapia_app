@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/*.log
+
+# Archivos temporales de Office
+~$*
+
+# Claude Code
+.claude/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
