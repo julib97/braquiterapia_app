@@ -304,6 +304,10 @@ def _build_informe_xlsx(data, plan_pdf_storage=None, form=None):
     wb = load_workbook(TEMPLATE_INFORME)
     ws = wb.worksheets[0]
 
+    # El título "Resumen dosimétrico..." en B29:I29 tiene wrapText+vertical=bottom;
+    # con altura de 1 línea LibreOffice solo muestra la última línea al exportar a PDF.
+    ws.row_dimensions[29].height = 30
+
     write_to_excel_cell(wb, ws.title, "G7", datetime.today().strftime("%d/%m/%Y"))
     write_to_excel_cell(wb, ws.title, "G12", patient_name)
 
